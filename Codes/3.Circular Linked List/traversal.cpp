@@ -15,11 +15,13 @@ struct Node *third;
 void linkedListTraversal(struct Node *head)
 {
     struct Node *ptr = head;
-    while (ptr != NULL)
+    do
     {
         cout << "Element : " << ptr->data << endl;
         ptr = ptr->next;
-    }
+    } 
+    while (ptr != head);
+    
 }
 int main()
 {
@@ -40,7 +42,7 @@ int main()
 
     // terminate list at the third node
     third->data = 78;
-    third->next = NULL;
+    third->next = head;
 
     linkedListTraversal(head);
     return 0;
